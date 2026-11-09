@@ -1,0 +1,21 @@
+### Uji 1: POST Peminjaman Sukses (Stok Ada)
+POST http://127.0.0.1:8000/api/circulation/borrow
+Content-Type: application/json
+Accept: application/json
+
+{
+    "member_id": 1,
+    "book_ids": [1]
+}
+
+###
+
+### Uji 2: POST Peminjaman Gagal (Stok Habis / Rollback)
+POST http://127.0.0.1:8000/api/circulation/borrow
+Content-Type: application/json
+Accept: application/json
+
+{
+    "member_id": 1,
+    "book_ids": [2]
+}
